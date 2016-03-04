@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Is Star Wars: The Force Awakens Released Yet?</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	
+	<meta name="description" content="Here's an answer" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<meta property="og:title" content="Is Star Wars: The Force Awakens Released Yet?"/>
+	<meta property="og:description" content="Here's your answer."/>
+	<meta property="og:image" content="http://www.isstarwars7releasedyet.com/fbimg.jpg"/>
+	<meta property="og:url" content="http://www.isstarwars7releasedyet.com" />
+	
+</head>
+
+
+<body>
+	<div id="content">
+	
+			<h1>Is Star Wars Episode 7: The Force Awakens released yet?</h1>
+			<h2 id="answer">...</h2>
+			<h3 id="releasedate">Star Wars: The Force Awakens releases on December 18, 2015.</h3>
+				
+			<!-- Animated Yoda gif by Rogie King - https://dribbble.com/rogie -->
+			<div id="yoda">
+				<img src="yoda.gif">
+			</div>
+
+	</div><!-- end content-->
+		
+		
+	<footer>
+		<p class="footer">Website by <a href="http://www.grantmiller.me">Grant Miller</a>
+		</p>
+
+	</footer>
+	
+	
+	<!-- determines whether or not Star Wars: The Force Awakens is released -->
+	<script type="text/javascript">
+	
+		var answer;
+		var explanation;
+
+		var date = new Date();
+		var currentDate = new Date(date.getFullYear(),date.getMonth(),date.getDate());
+
+		var releaseDate = new Date(2015,11,18);
+		
+		msPerDay = 24 * 60 * 60 * 1000;
+		timeLeft = (releaseDate.getTime() - date.getTime());
+		e_daysLeft = timeLeft / msPerDay;
+		daysLeft = Math.floor(e_daysLeft);
+
+		// see if the current date is before the release date
+		if (currentDate < releaseDate) {
+			answer = "No";
+			explanation = "Star Wars: The Force Awakens releases on December 18, 2015.<br/>Only <strong>" + daysLeft + "</strong> more days!";
+			document.getElementById("yoda").style.display = "hidden";
+
+		} else {
+			// It's December 18, 2015 or sometime in the future, so Star Wars is released!
+			answer = "Yes";
+			explanation = "May the Force be with you!";
+			document.getElementById("yoda").style.display = "block";
+		}
+		
+		// Results sent to HTML elements
+		document.getElementById("answer").innerHTML = answer;
+		document.getElementById("releasedate").innerHTML = explanation;
+	
+	</script>
+	
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5552370d2c71d866" async="async"></script>
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55675851-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</body>
+</html>

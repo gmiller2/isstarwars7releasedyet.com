@@ -1,0 +1,100 @@
+/* Sticky footer thanks to http://mystrd.at */
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	margin: 0 0 60px; /* bottom = footer height */
+}
+
+footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+	line-height: 40px;
+	width: 100%;
+	font-size: 20pt;
+}
+
+#content {
+	margin: 0 auto;
+}
+
+h1 {
+	visibility: hidden;
+	width: 100%;
+	margin:20px 0;
+	padding:0;
+	font-size: 1em;
+	text-align: center;
+	font-weight: bold;
+}
+
+h2 {
+	margin:0;
+	padding:0;
+	text-align: center;
+	line-height: 140px;
+}
+
+#answer {
+	margin-top: 30px;
+	font-size: 120pt;
+	text-transform: uppercase;
+}
+
+#releasedate {
+	font-weight: normal;
+	font-size: 15pt;
+	color: #bbb;
+	padding: 1em;
+}
+
+#yoda {
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+	margin-top: 20px;
+	margin-bottom: 80px;
+	max-width: 500px;
+}
+
+#yoda img {
+	width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+
+.footer {
+    color: #bbb;
+    font-size: 0.6em;
+    text-decoration: none;
+}
+
+.footer a {
+    color: #999;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+@media (min-width: 1px) and (max-width: 500px) {
+	#answer {
+		font-size: 80pt;
+		margin-top: -40px;
+		line-height: 90px;
+	}
+	
+}
